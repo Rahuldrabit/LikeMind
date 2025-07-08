@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'likemind-backend'
+    static_configs:
+      - targets: ['backend:8080']
+  - job_name: 'likemind-ai'
+    static_configs:
+      - targets: ['ai-service:8000']
